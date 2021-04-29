@@ -14,7 +14,7 @@ def dp_make_weight(egg_weights, target_weight, memo = {}):
         qty_eggs = weight
         for egg in egg_weights:
             if egg > weight:
-                break
+                continue
             if memo[weight - egg] + 1 < qty_eggs:
                 qty_eggs = memo[weight - egg] + 1
             memo[weight] = qty_eggs
